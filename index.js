@@ -50,27 +50,59 @@ function init() {
 
   const loadLocalButton = document.getElementById("load-local");
   loadLocalButton.addEventListener("click", loadLocalStorage);
+
+  const loadRemoteButton = document.getElementById("load-remote");
+  loadRemoteButton.addEventListener("click", loadRemoteData);
 }
 
 function storeLocalStorage() {
-    const data = JSON.stringify(LOCAL_STORAGE_DATA);
-    localStorage.setItem("data", data);
+  const data = JSON.stringify(LOCAL_STORAGE_DATA);
+  localStorage.setItem("data", data);
 }
 
 function loadLocalStorage() {
-    const data = localStorage.getItem("data");
-    const parsedData = JSON.parse(data);
-    
-    parsedData.forEach((projectCard) => {
-        const projectCardElement = document.createElement("project-card");
-        projectCardElement.setAttribute("title", projectCard.title);
-        projectCardElement.setAttribute("img-src", `./images/${projectCard.imgSrc}.jpeg`);
-        projectCardElement.setAttribute("img-alt", projectCard.imgAlt);
-        projectCardElement.setAttribute("description", projectCard.description);
-        projectCardElement.setAttribute("read-more-url", projectCard.readMoreUrl);
+  const data = localStorage.getItem("data");
+  const parsedData = JSON.parse(data);
 
-        document.body.appendChild(projectCardElement);
-    })
+  let projectGallerySection = document.getElementById("project-gallery");
+  projectGallerySection.innerHTML = "";
+
+  parsedData.forEach((projectCard) => {
+    const projectCardElement = createProjectCardElement(projectCard);
+    projectGallerySection.appendChild(projectCardElement);
+  });
+}
+
+function loadRemoteData() {
+  let projectGallerySection = document.getElementById("project-gallery");
+  projectGallerySection.innerHTML = "";
+
+  const url = "https://my-json-server.typicode.com/davidjeong0628/d24/posts";
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((projectCard) => {
+        const projectCardElement = createProjectCardElement(projectCard);
+        projectGallerySection.appendChild(projectCardElement);
+      });
+    });
+}
+
+function createProjectCardElement(projectCardObject) {
+  const projectCardElement = document.createElement("project-card");
+  projectCardElement.setAttribute("title", projectCardObject.title);
+  projectCardElement.setAttribute(
+    "img-src",
+    `./images/${projectCardObject.imgSrc}.jpeg`
+  );
+  projectCardElement.setAttribute("img-alt", projectCardObject.imgAlt);
+  projectCardElement.setAttribute("description", projectCardObject.description);
+  projectCardElement.setAttribute(
+    "read-more-url",
+    projectCardObject.readMoreUrl
+  );
+
+  return projectCardElement;
 }
 
 window.addEventListener("DOMContentLoaded", init);
