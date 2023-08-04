@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "title": "Half Dome",
+      "imgSrc": "half-dome",
+      "imgAlt": "Half Dome",
+      "description": "Half Dome is a granite dome at the eastern end of Yosemite Valley in Yosemite National Park, California. It is a well-known rock formation in the park, named for its distinct shape. One side is a sheer face while the other three sides are smooth and round, making it appear like a dome cut in half. The granite crest rises more than 4,737 ft (1,444 m) above the valley floor.",
+      "readMoreUrl": "https://en.wikipedia.org/wiki/Half_Dome"
+    },
+    {
+      "title": "Rock Formations",
+      "imgSrc": "rock-formations",
+      "imgAlt": "Rock Formations",
+      "description": "Some rock formations in the American Southwest",
+      "readMoreUrl": "https://en.wikipedia.org/wiki/Rock_formation"
+    },
+    {
+      "title": "Street Lamps",
+      "imgSrc": "streetlamp",
+      "imgAlt": "Street Lamps",
+      "description": "Some street lamps in a city",
+      "readMoreUrl": "https://en.wikipedia.org/wiki/Street_light"
+    },
+    {
+      "title": "Tokyo Skytree",
+      "imgSrc": "tokyo-skytree",
+      "imgAlt": "Tokyo Skytree",
+      "description": "Tokyo Skytree is a broadcasting, restaurant, and observation tower in Sumida, Tokyo, Japan. It became the tallest structure in Japan in 2010 and reached its full height of 634.0 metres (2,080 ft) in March 2011, making it the tallest tower in the world, displacing the Canton Tower, and the second tallest structure in the world after the Burj Khalifa (829.8 m/2,722 ft).",
+      "readMoreUrl": "https://en.wikipedia.org/wiki/Tokyo_Skytree"
+    },
+    {
+      "title": "Train Platform",
+      "imgSrc": "train-platform",
+      "imgAlt": "Train Platform",
+      "description": "A train platform in a city",
+      "readMoreUrl": "https://en.wikipedia.org/wiki/Train_station"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
