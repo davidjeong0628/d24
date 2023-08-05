@@ -15,7 +15,7 @@ class ProjectCard extends HTMLElement {
 
     let a = document.createElement("a");
     a.href = this.getAttribute("read-more-url");
-    a.textContent = "Read more";
+    a.textContent = "Read More";
     a.target = "_blank";
 
     let section = document.createElement("section");
