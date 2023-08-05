@@ -1,0 +1,18 @@
+:root {
+
+}
+
+h2 {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+img {
+    width: 95%;
+}

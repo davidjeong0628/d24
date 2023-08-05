@@ -27,12 +27,12 @@ const LOCAL_STORAGE_DATA = [
   },
 
   {
-    title: "Bridge",
-    imgSrc: "bridge",
-    imgAlt: "A bridge in the middle of a forest",
+    title: "Flowers",
+    imgSrc: "flowers",
+    imgAlt: "Flowers and lake in the background in Quebec, Canada",
     description:
-      "A bridge is a structure built to span a physical obstacle, such as a body of water, valley, or road, without closing the way underneath.",
-    readMoreUrl: "https://en.wikipedia.org/wiki/Bridge",
+      "Flowers are the reproductive structures produced by plants which belong to the group known as angiosperms (flowering plants). The function of a flower is to produce seeds through sexual reproduction.",
+    readMoreUrl: "https://en.wikipedia.org/wiki/Flower",
   },
 
   {

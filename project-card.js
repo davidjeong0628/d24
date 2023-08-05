@@ -21,6 +21,11 @@ class ProjectCard extends HTMLElement {
     let section = document.createElement("section");
     section.append(h2, img, p, a);
 
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "project-card.css";
+
+    this.shadowRoot.append(link);
     this.shadowRoot.append(section);
   }
 
