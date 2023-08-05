@@ -13,15 +13,28 @@
     <script type="module" src="project-card.js"></script>
     <script type="module" src="index.js"></script>
     <style>
+        :root {
+            --border: 1px solid black;
+            --project-card-width: 35%;
+            --project-card-margin: 1vw;
+        }
+
         * {
             box-sizing: border-box;
         }
 
-        project-card {
-            border: 1px solid black;
-            width: 40%;
-            display: inline-block
+        #project-gallery {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
+        project-card {
+            border: var(--border);
+            width: var(--project-card-width);
+            display: inline-block;
+            margin: var(--project-card-margin);
         }
     </style>
   </head>

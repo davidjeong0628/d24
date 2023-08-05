@@ -1,18 +1,32 @@
-:root {
-
+:host {
+  --image-width: 95%;
+  --link-color: rgb(0, 0, 238);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0.5dvw;
 }
 
 img {
-    width: 95%;
+  width: var(--image-width);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--link-color);
 }
